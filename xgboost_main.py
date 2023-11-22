@@ -1,5 +1,5 @@
 import pandas as pd
-from pipeline import get_feature_engineering_pipeline
+from pipeline import get_full_pipeline
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
@@ -14,7 +14,7 @@ btc_data['Date'] = pd.to_datetime(btc_data['Date'])
 btc_data.set_index('Date', inplace=True)
 
 # Erhalten der Pipeline
-full_pipeline = get_feature_engineering_pipeline()
+full_pipeline = get_full_pipeline()
 
 # Vorverarbeitung der Daten
 btc_data_preprocessed = full_pipeline.fit_transform(btc_data)

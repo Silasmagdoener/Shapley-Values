@@ -7,4 +7,9 @@ FEATURES_CONFIG = {
         # Fügen Sie hier weitere Lag-Features hinzu
     },
     # Hier können Sie weitere Arten von Features hinzufügen
+    'sma_features': {
+        'sma_3': 3,
+        'sma_7': 7,
+        'sma_30': 30
+    },
 }
